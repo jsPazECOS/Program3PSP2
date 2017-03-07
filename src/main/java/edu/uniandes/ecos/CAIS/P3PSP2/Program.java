@@ -1,11 +1,11 @@
 /**
-* Programa: Programa 3 - PSP 2
-* @author Juan Sebastian Paz Prieto 
-* @date  07/03/2017 
-* Clase: Program
-* Descripción: Clase que lee cada archivo y realiza los calculos requeridos en 
-* el formato de requerimientos.
-**/
+ * Programa: Programa 3 - PSP 2
+ *
+ * @author Juan Sebastian Paz Prieto
+ * @date 07/03/2017 Clase: Program Descripción: Clase que lee cada archivo y
+ * realiza los calculos requeridos en el formato de requerimientos.
+*
+ */
 package edu.uniandes.ecos.CAIS.P3PSP2;
 
 import java.io.BufferedReader;
@@ -56,6 +56,7 @@ public class Program {
 
     /**
      * Método que permite establecer los valores de X
+     *
      * @param x
      */
     public void setX(Data x) {
@@ -73,6 +74,7 @@ public class Program {
 
     /**
      * Método que permite establecer los valores de Y
+     *
      * @param y
      */
     public void setY(Data y) {
@@ -90,6 +92,7 @@ public class Program {
 
     /**
      * Método que permite establecer el valor de la sumatoria de X
+     *
      * @param XSum
      */
     public void setXSum(Double XSum) {
@@ -107,6 +110,7 @@ public class Program {
 
     /**
      * Método que permite establecer el valor de la sumatoria de Y
+     *
      * @param YSum
      */
     public void setYSum(Double YSum) {
@@ -124,6 +128,7 @@ public class Program {
 
     /**
      * Método que permite establecer el valor promedio de los valores de X
+     *
      * @param XAvg
      */
     public void setXAvg(Double XAvg) {
@@ -141,6 +146,7 @@ public class Program {
 
     /**
      * Método que permite establecer el valor promedio de los valores de Y
+     *
      * @param YAvg
      */
     public void setYAvg(Double YAvg) {
@@ -157,8 +163,9 @@ public class Program {
     }
 
     /**
-     * Método que permite establecer el valor de la sumatoria de los 
-     * valores de X al cuadrado
+     * Método que permite establecer el valor de la sumatoria de los valores de
+     * X al cuadrado
+     *
      * @param XSquaredSum
      */
     public void setXSquaredSum(Double XSquaredSum) {
@@ -166,18 +173,19 @@ public class Program {
     }
 
     /**
-     * Método que permite acceder a la sumatoria de los 
-     * valores de X al cuadrado
-     * @return un valor <code>Double</code> de la sumatoria de los 
-     * valores de X al cuadrado
+     * Método que permite acceder a la sumatoria de los valores de X al cuadrado
+     *
+     * @return un valor <code>Double</code> de la sumatoria de los valores de X
+     * al cuadrado
      */
     public Double getYSquaredSum() {
         return YSquaredSum;
     }
 
     /**
-     * Método que permite establecer el valor de la sumatoria de los 
-     * valores de Y al cuadrado
+     * Método que permite establecer el valor de la sumatoria de los valores de
+     * Y al cuadrado
+     *
      * @param YSquaredSum
      */
     public void setYSquaredSum(Double YSquaredSum) {
@@ -185,18 +193,20 @@ public class Program {
     }
 
     /**
-     * Método que permite acceder a la sumatoria de los 
-     * valores de la multiplicación entre Y y X
-     * @return un valor <code>Double</code> de la sumatoria de los 
-     * valores de X al cuadrado
+     * Método que permite acceder a la sumatoria de los valores de la
+     * multiplicación entre Y y X
+     *
+     * @return un valor <code>Double</code> de la sumatoria de los valores de X
+     * al cuadrado
      */
     public Double getXxY() {
         return XxY;
     }
 
     /**
-     * Método que permite establecer el valor de la sumatoria de los 
-     * valores de la multiplicación entre Y y X
+     * Método que permite establecer el valor de la sumatoria de los valores de
+     * la multiplicación entre Y y X
+     *
      * @param XxY
      */
     public void setXxY(Double XxY) {
@@ -205,6 +215,7 @@ public class Program {
 
     /**
      * Método que permite acceder al valor de B1
+     *
      * @return un valor <code>Double</code> de B1
      */
     public Double getB1() {
@@ -223,6 +234,7 @@ public class Program {
 
     /**
      * Método que permite acceder al valor de B0
+     *
      * @return un valor <code>Double</code> de B0
      */
     public Double getB0() {
@@ -233,11 +245,13 @@ public class Program {
      * Método que permite calcular el valor de B0
      */
     public void setB0() {
-        this.B0 = this.getYSquaredSum() - (this.getB1() * this.getXSquaredSum());
+        this.B0 = this.getYAvg() - (this.getB1() * this.getXAvg());
+        //this.B0 = this.getYSquaredSum() - (this.getB1() * this.getXSquaredSum());
     }
 
     /**
      * Método que permite acceder al valor de Rxy
+     *
      * @return un valor <code>Double</code> de Rxy
      */
     public Double getRxy() {
@@ -252,18 +266,19 @@ public class Program {
 
         Double partA = size * this.getXxY();
         Double partB = this.getXSum() * this.getYSum();
-        
+
         Double a = partA - partB;
-        
+
         Double b = (size * this.getXSquaredSum()) - (Math.pow(this.getXSum(), 2));
         Double c = (size * this.getYSquaredSum()) - (Math.pow(this.getYSum(), 2));
         Double d = Math.sqrt(b * c);
-        
+
         this.Rxy = a / d;
     }
 
     /**
      * Método que permite acceder al valor de R al cuadrado
+     *
      * @return un valor <code>Double</code> de R al cuadrado
      */
     public Double getR2() {
@@ -279,6 +294,7 @@ public class Program {
 
     /**
      * Método que permite acceder al valor de Yk
+     *
      * @return un valor <code>Double</code> de Yk
      */
     public Double getYk() {
@@ -294,6 +310,7 @@ public class Program {
 
     /**
      * Método que permite acceder al valor de Xk
+     *
      * @return un valor <code>Double</code> de Xk
      */
     public Double getXk() {
@@ -302,6 +319,7 @@ public class Program {
 
     /**
      * Método que permite calcular el valor de Xk
+     *
      * @param Xk
      */
     public void setXk(Double Xk) {
@@ -316,8 +334,9 @@ public class Program {
     }
 
     /**
-     * Método que lee los archivos localizados en path para instanciar objetos 
+     * Método que lee los archivos localizados en path para instanciar objetos
      * de tipo Data
+     *
      * @param path
      */
     public void readFiles(String path) {
@@ -358,8 +377,9 @@ public class Program {
     }
 
     /**
-     * Método que permite crear los casos de prueba apartir de los datos de los 
+     * Método que permite crear los casos de prueba apartir de los datos de los
      * archivos
+     *
      * @param x
      * @param y
      */
@@ -387,9 +407,10 @@ public class Program {
 
     /**
      * Método que calcula la sumatoria de los datos de una serie de datos
+     *
      * @param data
-     * @return un valor <code>Double</code> de la sumatoria de 
-     * una serie de datos
+     * @return un valor <code>Double</code> de la sumatoria de una serie de
+     * datos
      */
     public Double calculateSumatory(Data data) {
         Double sumatory = 0.0;
@@ -404,10 +425,11 @@ public class Program {
     }
 
     /**
-     * Método que calcula la sumatoria de los datos al cuadrado 
-     * de una serie de datos
+     * Método que calcula la sumatoria de los datos al cuadrado de una serie de
+     * datos
+     *
      * @param data
-     * @return un valor <code>Double</code> de la sumatoria de los datos al 
+     * @return un valor <code>Double</code> de la sumatoria de los datos al
      * cuadrado una serie de datos
      */
     public Double calculateSquaredSumatory(Data data) {
@@ -424,8 +446,9 @@ public class Program {
     }
 
     /**
-     * Método que calcula la sumatoria de la multiplicación entre 
-     * los datos de dos series de datos
+     * Método que calcula la sumatoria de la multiplicación entre los datos de
+     * dos series de datos
+     *
      * @param X
      * @param Y
      * @return un valor <code>Double</code> de la sumatoria de la multiplicación
