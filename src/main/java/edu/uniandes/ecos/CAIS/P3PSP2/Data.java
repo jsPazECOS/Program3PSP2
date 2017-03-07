@@ -1,7 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Programa: Programa 3 - PSP 2
+ *
+ * @author Juan Sebastian Paz Prieto
+ * @date 07/03/2017 Clase: Data Descripción: Clase que tiene los atributos de
+ * cada archivo, nombre y datos.
+*
  */
 package edu.uniandes.ecos.CAIS.P3PSP2;
 
@@ -16,27 +19,23 @@ public class Data {
     private String name;
     private LinkedList<Double> data;
 
+    /**
+     * Método constructor de la clase Data
+     *
+     * @param name nombre del archivo
+     * @param data lista de los datos
+     */
     public Data(String name, LinkedList<Double> data) {
         this.name = name;
         this.data = data;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
+    /**
+     * Método que permite acceder a los datos de la data
+     *
+     * @return un valor <code>LinkedList</code> que representa los datos
+     */
     public LinkedList<Double> getData() {
         return data;
     }
 
-    public void setData(LinkedList<Double> data) {
-        this.data = data;
-    }
-    
-    
-    
 }

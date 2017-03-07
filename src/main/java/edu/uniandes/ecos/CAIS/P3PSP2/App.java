@@ -1,11 +1,13 @@
 package edu.uniandes.ecos.CAIS.P3PSP2;
 
-import ch.qos.logback.classic.util.ContextInitializer;
-
 /**
- * Hello world!
- *
- */
+* Programa: Programa 3 - PSP 2
+* @author Juan Sebastian Paz Prieto 
+* @date  07/03/2017 
+* Clase: App
+* Descripción: Esta clase Instancia la clase Program y accede a sus métodos
+**/
+
 public class App {
 
     public static void main(String[] args) {
