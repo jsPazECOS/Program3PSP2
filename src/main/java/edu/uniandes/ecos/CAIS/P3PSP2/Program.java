@@ -246,7 +246,6 @@ public class Program {
      */
     public void setB0() {
         this.B0 = this.getYAvg() - (this.getB1() * this.getXAvg());
-        //this.B0 = this.getYSquaredSum() - (this.getB1() * this.getXSquaredSum());
     }
 
     /**
